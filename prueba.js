@@ -9,6 +9,7 @@ Validar versión de NODE: node -v / nodejs -v
 */
 
 /*
+const prompt = require("prompt-sync")({ sigint: true });
 let nombre = prompt("Ingrese su nombre: ");
 console.log(`Hola ${nombre}!!!`);
 
@@ -33,15 +34,6 @@ if (edad1 >= 21) {
         }
 } else {
     console.log("No puedes ingresar al bar")
-}
-
-let edad2 = parseInt(prompt("Indicar tu edad: "));
-if (edad2 < 18) {
-    console.log("No puedes ingresar al bar")
-} else if (edad2 >= 18 && edad2 < 21) {
-    console.log("Puedes ingresar al bar pero no tomar alcohol")
-} else {
-    console.log("Puedes ingresar al bar y tomar alcohol")
 }
 
 let dia1 = parseInt(prompt("Ingrese un numero "));
@@ -72,6 +64,13 @@ switch (dia1) {
 }
 
 Clase 4
+//Declarar funcion dentro de una variable
+let ejemplo = function() {
+    let mensaje = "hola, soy una función expresada"
+    return mensaje
+}
+console.log(ejemplo());
+
 function sumar(numeroUno, numeroDos) {
     let sumarResultado = numeroUno + numeroDos;
     //console.log(sumarResultado);
@@ -80,13 +79,6 @@ function sumar(numeroUno, numeroDos) {
 let numeroUno = 10;
 let numeroDos = 15;
 console.log(sumar(numeroUno, numeroDos));
-
-//Declarar funcion dentro de una variable
-let ejemplo = function() {
-    let mensaje = "hola, soy una función expresada"
-    return mensaje
-}
-console.log(ejemplo());
 
 // Arrow functions: Cuando funciones no reciben parametros va "= () =>""
 let dameCinco = () => [1,2,3,4,5];
@@ -136,21 +128,21 @@ Queremos sacar(pop) a Alexis y sabemos que está último en ese array.
 Utilizar un método de array para guardar los datos de Alexis en una nueva variable 
 llamada alumnoEgresado.
 let estudiantes = [
-  {
+    {
     nombre: "Alvaro",
     promedio: 9,
     curso: "Android"
-  },
-  {
+    },
+    {
     nombre: "Daniel",
     promedio: 6,
     curso: "Full Stack"
-  },
-  {
+    },
+    {
     nombre: "Alexis",
     promedio: 3,
     curso: "iOS"
-  }
+    }
 ];
 let alumnoEgresado = estudiantes.pop();
 console.log(alumnoEgresado);
@@ -160,11 +152,11 @@ al final del array estudiantes.
 Nuestro trabajo será agregar de a un alumno por vez, utilizando algún método de array.
 Los valores de cada uno son:
 let estudiantes = [
-  {
+    {
     nombre: 'Alvaro',
     promedio : 9,
     curso : 'Android',
-  },
+    },
 ]
 estudiantes.push(
     {

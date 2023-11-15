@@ -1,15 +1,18 @@
 //Ejercicio Bucles
 //1. Crear una función que pida un valor por parámetro y muestre los 10 números siguientes
+const prompt = require("prompt-sync")({ sigint: true });
+let numIngresado = parseInt(prompt("Ingresar número: "));
+let resultado = [];
 
-//const prompt = require("prompt-sync")({ sigint: true });
-let numero = parseInt(prompt("¿Ingrese un valor numérico: "));
-
-function los10Siguientes (numero) {
-    for (let i= numero+1; i<= numero +10; i++) {
-        console.log(i);
+function tenNumSiguientes(numIngresado) {
+    for(let i=1; i<=10; i++){
+        numIngresado ++;
+        resultado.push(numIngresado);
+        //console.log(numIngresado);
     }
+    return resultado;
 };
-los10Siguientes(numero);
+console.log(tenNumSiguientes(numIngresado));
 
 //2. Imprimir los numeros entre el 5 y el 20, saltando de tres en tres.
 for (let i= 5; i <= 20; i += 3) {
@@ -18,8 +21,9 @@ for (let i= 5; i <= 20; i += 3) {
 
 //3. Escribir un programa que muestre la sumatoria de todos los números entre el 0 y el 100.
 let sumatoria = 0;
-for (let i= 0; i <= 100; i++) {
-    sumatoria += i 
+for (let i=1; i<=100; i++) {
+    sumatoria = sumatoria + i;
+    //sumatoria += i
 }
 console.log("La sumatoria de los números entre 0 y 100 es: " + sumatoria);
 
@@ -40,12 +44,12 @@ function calcularFactorial (numeroPositivo) {
         return factorial;
     }
 }
-const resultado = calcularFactorial(numeroPositivo);
-console.log(`El factorial de ${numeroPositivo} es ${resultado}`);
+const resultado2 = calcularFactorial(numeroPositivo);
+console.log(`El factorial de ${numeroPositivo} es ${resultado2}`);
 
 //5. Crear una función que muestre todos los números de la secuencia de fibonacci hasta el valor ingresado por parámetro.
-const prompt = require("prompt-sync")({ sigint: true });
-let valorIngresado = parseInt(prompt("Por favor, introduzca el valor hasta el cual desea que alcance la serie de Fibonacci: "));
+const prompt1 = require("prompt-sync")({ sigint: true });
+let valorIngresado = parseInt(prompt1("Por favor, introduzca el valor hasta el cual desea que alcance la serie de Fibonacci: "));
 
 let primerNumero = 0;
 let segundoNumero = 1;

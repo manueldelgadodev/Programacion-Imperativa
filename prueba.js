@@ -186,4 +186,3 @@ console.log("==FIN ENTRENAMIENTO==");
 console.log("Deportista energia: "+deportista.energia);
 console.log("Deportista experiencia: "+deportista.experiencia);
 */
-

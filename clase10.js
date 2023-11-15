@@ -19,9 +19,10 @@ let misMascotas = [
     edad: 4,
     sonido: "guau",
     retornarSonido: function() {
-        for(let i=0; i<2; i++) {
+        /*for(let i=0; i<2; i++) {
             console.log(this.sonido);
-        }
+        }*/
+        return `${this.sonido}``${this.sonido}`;
     }
     },
     {
@@ -30,9 +31,10 @@ let misMascotas = [
     edad: 8,
     sonido: "pio",
     retornarSonido: function() {
-        for(let i=0; i<2; i++) {
+        /*for(let i=0; i<2; i++) {
             console.log(this.sonido);
-        }
+        }*/
+        return `${this.sonido}``${this.sonido}`;
     }
     },
     {
@@ -41,9 +43,10 @@ let misMascotas = [
     edad: 12,
     sonido: "miau",
     retornarSonido: function() {
-        for(let i = 0; i < 2; i++) {
+        /*for(let i=0; i<2; i++) {
             console.log(this.sonido);
-        }
+        }*/
+        return `${this.sonido}``${this.sonido}`;
     }
     },
 ]
@@ -54,8 +57,10 @@ let misMascotas = [
 // 3) Deberemos crear una función que se llame aumentarEdad que aumente la edad de cada animal en 1.
 function aumentarEdad(misMascotas) {
     for (let i=0; i<misMascotas.length; i++) {
-        let nuevasEdades = misMascotas[i].edad++;
+        misMascotas[i].edad = misMascotas[i].edad + 1;
+        //misMascotas[i].edad += 1;
     }
+    return misMascotas;
 };
 //aumentarEdad(misMascotas);
 //console.log(misMascotas[0].edad);
@@ -69,11 +74,15 @@ function aumentarEdad(misMascotas) {
 function aumentarEdad2 (misMascotas) {
     for (let i = 0; i < misMascotas.length; i++) {
         if (misMascotas[i].edad < 6) {
-            misMascotas[i].edad++;
+            //misMascotas[i].edad++;
+            misMascotas[i].edad = misMascotas[i].edad + 1;
         } else if (misMascotas[i].edad >= 6 && misMascotas[i].edad <= 10){
-            misMascotas[i].edad += 2;
+            //misMascotas[i].edad += 2;
+            misMascotas[i].edad = misMascotas[i].edad + 2;
         } else if (misMascotas[i].edad > 10) {
-            misMascotas[i].edad += misMascotas[i].edad/2;
+            //misMascotas[i].edad += misMascotas[i].edad/2;
+            let mitad = misMascotas[i].edad / 2;
+            misMascotas[i].edad = misMascotas[i].edad + mitad;
         }
     }
 }
@@ -86,11 +95,12 @@ function aumentarEdad2 (misMascotas) {
 , que será secuencial y que empezará en 1. */
 function agregarId (misMascotas) {
     for (let i = 0; i < misMascotas.length; i++) {
-        misMascotas[i].id = i+1;
+        misMascotas[i].id = i + 1;
         }
+        return misMascotas;
     }
 //agregarId(misMascotas);
-//console.log(misMascotas);
+//console.log(agregarId(misMascotas));
 
 /* NUEVO ARREGLO
 Debés crear una función llamada `nuevoArreglo` que reciba un número como parámetro 

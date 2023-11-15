@@ -22,7 +22,7 @@ let misMascotas = [
         /*for(let i=0; i<2; i++) {
             console.log(this.sonido);
         }*/
-        return `${this.sonido}``${this.sonido}`;
+        return `${this.sonido} `+ ` ${this.sonido}`;
     }
     },
     {
@@ -50,9 +50,9 @@ let misMascotas = [
     }
     },
 ]
-//console.log(misMascotas[0].retornarSonido());
+//console.log(misMascotas);
+console.log(misMascotas[0].retornarSonido());
 //console.log(misMascotas[1].retornarSonido());
-//console.log(misMascotas[2].retornarSonido());
 
 // 3) Deberemos crear una función que se llame aumentarEdad que aumente la edad de cada animal en 1.
 function aumentarEdad(misMascotas) {
